@@ -1,0 +1,5 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": { "namespace": "android_app", "package_name": "app.crackz.beta",
+    "sha256_cert_fingerprints": ["AD:91:7F:96:62:6B:EF:56:AF:F1:FB:BC:17:0D:72:1C:AE:15:08:42:BA:F8:09:33:3E:18:40:B6:B6:0F:B2:CF"] }
+}]
