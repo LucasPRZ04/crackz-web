@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hacer equipos equilibrados para fútbol · Generador gratis | Crackz</title>
+<meta name="description" content="Pega la lista de jugadores, marca el nivel de cada uno y haz dos equipos parejos en un segundo. Gratis, sin registro y listo para mandar por WhatsApp.">
+<link rel="canonical" href="https://crackz.es/equipos">
+<meta name="theme-color" content="#0B0F14">
+<link rel="icon" type="image/png" href="/logo.png">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Crackz">
+<meta property="og:url" content="https://crackz.es/equipos">
+<meta property="og:title" content="Haz equipos equilibrados para tu pachanga">
+<meta property="og:description" content="Pega los nombres, marca el nivel y salen dos equipos parejos. Gratis.">
+<meta property="og:image" content="https://crackz.es/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"WebApplication","name":"Generador de equipos equilibrados","url":"https://crackz.es/equipos","applicationCategory":"SportsApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"Crackz","url":"https://crackz.es/"}},
+ {"@type":"HowTo","name":"Cómo hacer equipos equilibrados para una pachanga","step":[
+  {"@type":"HowToStep","name":"Pega la lista","text":"Escribe o pega los nombres de los jugadores, uno por línea."},
+  {"@type":"HowToStep","name":"Marca el nivel","text":"Pon a cada jugador un nivel del 1 al 5 y marca quién es portero."},
+  {"@type":"HowToStep","name":"Haz los equipos","text":"Pulsa el botón: el reparto deja los dos equipos con la suma de nivel más parecida posible."},
+  {"@type":"HowToStep","name":"Mándalos","text":"Comparte los equipos por WhatsApp con un toque."}]}
+]}
+</script>
+<style>
+@font-face{font-family:Anton;src:url(/fonts/anton.woff2) format('woff2');font-display:swap}
+@font-face{font-family:Inter;font-weight:400 500;src:url(/fonts/inter-400.woff2) format('woff2');font-display:swap}
+@font-face{font-family:Inter;font-weight:600;src:url(/fonts/inter-600.woff2) format('woff2');font-display:swap}
+@font-face{font-family:Inter;font-weight:700;src:url(/fonts/inter-700.woff2) format('woff2');font-display:swap}
+@font-face{font-family:Inter;font-weight:800 900;src:url(/fonts/inter-900.woff2) format('woff2');font-display:swap}
+:root{--bg:#0B0F14;--lime:#C8FF3E;--t:#F2F5F7;--m:#9AA6B2;--card:rgba(21,27,35,.82);--line:rgba(255,255,255,.08)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:hidden}
+body{background:radial-gradient(110% 50% at 50% 0%,rgba(200,255,62,.14),rgba(11,15,20,0) 60%),var(--bg);color:var(--t);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh}
+.w{max-width:620px;margin:0 auto;padding:22px 18px 60px}
+.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--t);font-family:Anton,sans-serif;font-size:22px;letter-spacing:2px}
+.brand img{width:30px;height:30px}
+.top a.app{color:var(--lime);font-weight:700;font-size:14px;text-decoration:none}
+.kicker{color:var(--lime);font:900 12px Inter;letter-spacing:3px;text-transform:uppercase}
+h1{font-family:Anton,sans-serif;font-weight:400;font-size:clamp(38px,8vw,56px);line-height:1;text-transform:uppercase;margin:10px 0 12px}
+h1 em{font-style:normal;color:var(--lime)}
+.lead{color:#C9D2DB;line-height:1.5;margin-bottom:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;margin-top:14px}
+label.t{display:block;font-weight:700;margin-bottom:8px}
+textarea{width:100%;min-height:150px;border-radius:16px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);color:#fff;font:500 16px/1.5 Inter;padding:12px 14px;resize:vertical}
+.row{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row .n{flex:1;font-weight:600;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lv{display:flex;gap:4px}
+.lv button{width:30px;height:30px;border-radius:9px;border:1px solid rgba(255,255,255,.14);background:transparent;color:var(--m);font:800 13px Inter;cursor:pointer}
+.lv button.on{background:var(--lime);color:#0B1405;border-color:var(--lime)}
+.gk{height:30px;padding:0 10px;border-radius:9px;border:1px solid rgba(255,255,255,.14);background:transparent;color:var(--m);font:800 12px Inter;cursor:pointer}
+.gk.on{background:#2F8BFF;color:#fff;border-color:#2F8BFF}
+.btn{display:flex;align-items:center;justify-content:center;width:100%;height:56px;border-radius:16px;background:var(--lime);color:#0B0F14;font:800 17px Inter;border:0;cursor:pointer;margin-top:14px;box-shadow:0 10px 36px rgba(200,255,62,.25)}
+.btn.ghost{background:rgba(255,255,255,.06);color:var(--t);box-shadow:none;border:1px solid rgba(255,255,255,.14)}
+.teams{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.team{border-radius:20px;padding:14px;border:1px solid var(--line)}
+.team.a{background:linear-gradient(180deg,rgba(200,255,62,.14),rgba(21,27,35,.85))}
+.team.b{background:linear-gradient(180deg,rgba(47,139,255,.16),rgba(21,27,35,.85))}
+.team h3{font-family:Anton,sans-serif;font-weight:400;font-size:24px;letter-spacing:1px}
+.team .s{color:var(--m);font-size:12px;margin-bottom:8px}
+.team li{list-style:none;padding:5px 0;font-weight:600;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:6px}
+.team li span{color:var(--m);font-weight:500;font-size:13px}
+.hint{color:var(--m);font-size:13px;margin-top:8px;line-height:1.45}
+.promo{margin-top:26px;border-radius:22px;padding:20px;background:linear-gradient(135deg,rgba(200,255,62,.12),rgba(200,255,62,0));border:1px solid rgba(200,255,62,.3)}
+.promo h2{font-family:Anton,sans-serif;font-weight:400;font-size:28px;text-transform:uppercase;line-height:1.05}
+.promo p{color:#C9D2DB;line-height:1.5;margin-top:8px}
+.faq h2{font-family:Anton,sans-serif;font-weight:400;font-size:30px;text-transform:uppercase;margin:34px 0 6px}
+.faq h3{font-size:17px;margin-top:18px}
+.faq p{color:var(--m);line-height:1.55;margin-top:6px}
+footer{color:var(--m);font-size:13px;margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+footer a{color:var(--m);text-decoration:none}
+</style>
+</head>
+<body><div class="w">
+<div class="top"><a class="brand" href="/"><img src="/logo.png" alt="" width="30" height="30">CRACKZ</a><a class="app" href="/">La app →</a></div>
+
+<span class="kicker">Herramienta gratis</span>
+<h1>Equipos <em>equilibrados</em> en un segundo</h1>
+<p class="lead">Pega la lista de tu pachanga, marca el nivel de cada uno y salen dos equipos parejos. Sin registro y listo para mandar por WhatsApp.</p>
+
+<div class="card">
+  <label class="t" for="lista">1. Jugadores (uno por línea)</label>
+  <textarea id="lista" placeholder="Rojas&#10;Dani&#10;Álex&#10;Pepe&#10;Juanma&#10;Sergio&#10;Iván&#10;Marcos&#10;Raúl&#10;Hugo"></textarea>
+  <p class="hint">Puedes pegar la lista tal cual de WhatsApp: quitamos números, guiones y emojis.</p>
+</div>
+
+<div class="card" id="niveles" hidden>
+  <label class="t">2. Nivel de cada uno (1 flojo · 5 crack) y portero</label>
+  <div id="filas"></div>
+</div>
+
+<button class="btn" id="hacer">Hacer equipos</button>
+
+<div id="res" hidden>
+  <div class="teams">
+    <div class="team a"><h3>EQUIPO A</h3><div class="s" id="sa"></div><ul id="ta"></ul></div>
+    <div class="team b"><h3>EQUIPO B</h3><div class="s" id="sb"></div><ul id="tb"></ul></div>
+  </div>
+  <button class="btn" id="wa">Mandar por WhatsApp</button>
+  <button class="btn ghost" id="otra">Otra combinación igual de pareja</button>
+</div>
+
+<div class="promo">
+  <span class="kicker">¿Y si se hicieran solos?</span>
+  <h2>En Crackz los equipos salen por la media real de cada uno</h2>
+  <p>Tus colegas se votan después de cada partido y la app reparte por esa media: cada semana más justo. Además convocatoria por WhatsApp, cartas tipo FIFA y ranking del grupo. Gratis.</p>
+  <a class="btn" href="/" style="text-decoration:none">Conocer Crackz</a>
+</div>
+
+<section class="faq">
+  <h2>Cómo hacer equipos justos</h2>
+  <h3>¿Cómo reparte esta herramienta?</h3>
+  <p>Ordena a los jugadores por nivel y los va colocando en el equipo que menos suma lleva en ese momento. Luego prueba intercambios entre los dos equipos para dejar la diferencia lo más pequeña posible. Los porteros se reparten uno a cada lado.</p>
+  <h3>¿Y si somos impares?</h3>
+  <p>Un equipo tendrá uno más. La herramienta lo compensa: cuenta al jugador de más como medio jugador y deja al equipo con uno menos con más nivel por cabeza.</p>
+  <h3>¿Sirve para fútbol sala, fútbol 7 y fútbol 11?</h3>
+  <p>Sí, para cualquier número de jugadores y también para pádel o básquet entre amigos.</p>
+</section>
+
+<footer><a href="/">Crackz</a><a href="/novedades">Novedades</a><a href="/privacidad">Privacidad</a></footer>
+</div>
+<script>
+var J=[], ultimo=null;
+function limpia(l){ return l.replace(/^[\s\d\-\.\)\*•·]+/,'').replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/gu,'').trim().slice(0,24); }
+function lee(){
+  var nombres=document.getElementById('lista').value.split('\n').map(limpia).filter(Boolean);
+  var prev={}; J.forEach(function(p){prev[p.n.toLowerCase()]=p;});
+  J=nombres.map(function(n){ var p=prev[n.toLowerCase()]; return p?p:{n:n,l:3,gk:false}; });
+  pinta();
+}
+function pinta(){
+  var f=document.getElementById('filas'); f.innerHTML='';
+  document.getElementById('niveles').hidden=J.length<2;
+  J.forEach(function(p,i){
+    var r=document.createElement('div'); r.className='row';
+    var n=document.createElement('div'); n.className='n'; n.textContent=p.n; r.appendChild(n);
+    var lv=document.createElement('div'); lv.className='lv';
+    for(var k=1;k<=5;k++){ (function(k){ var b=document.createElement('button'); b.type='button'; b.textContent=k; b.setAttribute('aria-label',p.n+' nivel '+k); if(p.l===k)b.className='on'; b.onclick=function(){p.l=k;pinta();}; lv.appendChild(b); })(k); }
+    r.appendChild(lv);
+    var g=document.createElement('button'); g.type='button'; g.className='gk'+(p.gk?' on':''); g.textContent='POR'; g.setAttribute('aria-label',p.n+' es portero'); g.onclick=function(){p.gk=!p.gk;pinta();}; r.appendChild(g);
+    f.appendChild(r);
+  });
+}
+function suma(t){ return t.reduce(function(s,p){return s+p.l;},0); }
+// fuerza real: el jugador de más (cuando sois impares) vale como medio jugador medio
+var MEDIA=3, NMIN=0;
+function fuerza(t){ return suma(t) + (t.length-NMIN)*MEDIA*0.5; }
+function reparte(semilla){
+  var gk=J.filter(function(p){return p.gk;}), resto=J.filter(function(p){return !p.gk;});
+  var rnd=function(){ semilla=(semilla*9301+49297)%233280; return semilla/233280; };
+  resto=resto.map(function(p){return [p.l+rnd()*0.9,p];}).sort(function(a,b){return b[0]-a[0];}).map(function(x){return x[1];});
+  MEDIA=J.length?suma(J)/J.length:3; NMIN=Math.floor(J.length/2);
+  var A=[],B=[];
+  gk.sort(function(a,b){return b.l-a.l;}).forEach(function(p,i){ (i%2?B:A).push(p); });
+  resto.forEach(function(p){ var a=fuerza(A), b=fuerza(B); if(A.length>B.length) B.push(p); else if(B.length>A.length) A.push(p); else (a<=b?A:B).push(p); });
+  // mejora con intercambios de jugadores de campo
+  for(var it=0;it<60;it++){ var mejor=null, d0=Math.abs(fuerza(A)-fuerza(B));
+    A.forEach(function(x,i){ if(x.gk) return; B.forEach(function(y,j){ if(y.gk) return; var d=Math.abs((fuerza(A)-x.l+y.l)-(fuerza(B)-y.l+x.l)); if(d<d0-1e-9){d0=d;mejor=[i,j];} }); });
+    if(!mejor) break; var t=A[mejor[0]]; A[mejor[0]]=B[mejor[1]]; B[mejor[1]]=t; }
+  return [A,B];
+}
+function muestra(T){
+  ultimo=T; ['a','b'].forEach(function(k,i){ var t=T[i], ul=document.getElementById('t'+k); ul.innerHTML='';
+    t.forEach(function(p){ var li=document.createElement('li'); li.textContent=p.n; var s=document.createElement('span'); s.textContent=(p.gk?'POR · ':'')+p.l; li.appendChild(s); ul.appendChild(li); });
+    document.getElementById('s'+k).textContent=t.length+' jugadores · nivel '+suma(t); });
+  document.getElementById('res').hidden=false;
+  document.getElementById('res').scrollIntoView({behavior:'smooth'});
+}
+var sem=7;
+document.getElementById('lista').addEventListener('input',lee);
+document.getElementById('hacer').onclick=function(){ lee(); if(J.length<2){ document.getElementById('lista').focus(); return; } sem=7; muestra(reparte(sem)); };
+document.getElementById('otra').onclick=function(){ sem+=13; muestra(reparte(sem)); };
+document.getElementById('wa').onclick=function(){ if(!ultimo) return;
+  var txt='⚽ *EQUIPOS*\n\n🟢 *Equipo A*\n'+ultimo[0].map(function(p){return '• '+p.n+(p.gk?' (POR)':'');}).join('\n')+'\n\n🔵 *Equipo B*\n'+ultimo[1].map(function(p){return '• '+p.n+(p.gk?' (POR)':'');}).join('\n')+'\n\nHechos con crackz.es/equipos';
+  location.href='https://wa.me/?text='+encodeURIComponent(txt); };
+</script>
+</body></html>
