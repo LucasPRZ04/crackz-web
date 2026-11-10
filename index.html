@@ -1,24 +1,205 @@
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Crackz · Tu pachanga, como en el FIFA</title>
-<meta name="description" content="Organiza tus pachangas, vota a tus compis y sube tu media. Cartas, temporadas y trofeos para el fútbol de los amigos.">
-<meta name="theme-color" content="#0B0F14"><link rel="icon" href="data:image/png;base64,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">
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<html lang="es-ES">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Crackz · La app para organizar pachangas de fútbol con cartas tipo FIFA</title>
+<meta name="description" content="Organiza tus pachangas de fútbol en 10 segundos, vota a tus compis después de cada partido y sube tu media. Cartas, temporadas, trofeos y personajes 3D. Gratis.">
+<link rel="canonical" href="https://crackz.es/">
+<meta name="theme-color" content="#0B0F14">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="apple-touch-icon" href="/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Crackz">
+<meta property="og:url" content="https://crackz.es/">
+<meta property="og:title" content="Crackz · Tu pachanga, como en el FIFA">
+<meta property="og:description" content="Convoca por WhatsApp, vota a tus compis y sube tu media. Cartas, temporadas y personajes 3D para el fútbol de los amigos.">
+<meta property="og:image" content="https://crackz.es/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Personajes 3D de Crackz en un estadio de noche">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Crackz · Tu pachanga, como en el FIFA">
+<meta name="twitter:description" content="Convoca por WhatsApp, vota a tus compis y sube tu media.">
+<meta name="twitter:image" content="https://crackz.es/img/og.jpg">
+<link rel="preload" href="/fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="/img/hero.webp">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","@id":"https://crackz.es/#org","name":"Crackz","url":"https://crackz.es/","logo":"https://crackz.es/logo.png","email":"hola@crackz.es"},
+ {"@type":"MobileApplication","name":"Crackz","operatingSystem":"Android","applicationCategory":"SportsApplication","inLanguage":"es","url":"https://crackz.es/","image":"https://crackz.es/img/og.jpg","description":"App para organizar pachangas de fútbol con amigos: convocatorias por WhatsApp, votaciones tras cada partido, media tipo FIFA, temporadas y trofeos.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@id":"https://crackz.es/#org"}},
+ {"@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"¿Crackz es gratis?","acceptedAnswer":{"@type":"Answer","text":"Sí. Organizar partidos, votar, tu carta, la media y las temporadas son gratis. La tienda solo tiene objetos estéticos y nunca cambia tu media."}},
+  {"@type":"Question","name":"¿Mis amigos tienen que descargar la app para apuntarse?","acceptedAnswer":{"@type":"Answer","text":"No. Pasas el enlace del partido por WhatsApp y se apuntan desde el navegador. Para votar y tener su carta sí necesitan la app."}},
+  {"@type":"Question","name":"¿Cómo se calcula la media?","acceptedAnswer":{"@type":"Answer","text":"Después de cada partido tus compañeros votan tu actuación. Se suman goles, asistencias y el MVP. La media sube o baja poco a poco para que sea justa."}},
+  {"@type":"Question","name":"¿Sirve para fútbol 7, fútbol sala y fútbol 11?","acceptedAnswer":{"@type":"Answer","text":"Sí. Crackz sirve para cualquier pachanga: fútbol sala, fútbol 7, fútbol 11 y también pádel o básquet con amigos."}}
+ ]}
+]}
+</script>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{background:radial-gradient(120% 70% at 50% 0%,rgba(200,255,62,.18),#0B0F14 60%);background-color:#0B0F14;color:#F2F5F7;font-family:Inter,sans-serif;min-height:100vh}
-.w{max-width:560px;margin:0 auto;padding:48px 22px;text-align:center}img{width:110px}h1{font-family:Anton,sans-serif;font-size:58px;letter-spacing:3px;margin:12px 0}
-p{color:#9AA6B2;font-size:17px;line-height:1.5}.f{display:grid;gap:12px;margin:34px 0;text-align:left}.f div{background:rgba(21,27,35,.8);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:16px 18px}
-b{display:block;margin-bottom:4px}form{display:flex;gap:8px;margin-top:18px}input{flex:1;height:54px;border-radius:16px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05);color:#fff;font:600 18px Inter;padding:0 16px;text-transform:uppercase}
-button{height:54px;padding:0 20px;border:0;border-radius:16px;background:#C8FF3E;color:#0B0F14;font:700 16px Inter}
-</style></head><body><div class="w">
-<img src="data:image/png;base64,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" alt="Crackz"><h1>CRACKZ</h1>
-<p>La pachanga de siempre, ahora con cartas, media y trofeos. Tus compis te votan después de cada partido.</p>
-<div class="f">
-<div><b>⚽ Convoca en 10 segundos</b>Pasa el enlace por WhatsApp y la gente se apunta sin descargar nada.</div>
-<div><b>⭐ Tu media sube o baja</b>Votos de tus compis, goles, asistencias y MVP. Juego limpio, sin humillar a nadie.</div>
-<div><b>🏆 Temporadas y palmarés</b>MVP de temporada, Pichichi, ligas semanales. Un historial que te acompaña años.</div>
-</div>
-<p style="margin-bottom:22px"><a href="/novedades" style="color:#C8FF3E;font-weight:700;text-decoration:none">Ver novedades →</a></p>
-<p>¿Tienes un código de partido?</p>
-<form onsubmit="event.preventDefault();location.href='/jugar/'+document.getElementById('c').value.trim().toUpperCase()"><input id="c" maxlength="8" placeholder="ABC123"><button>Ver partido</button></form>
-</div></body></html>
+@font-face{font-family:Anton;src:url(/fonts/anton.woff2) format('woff2');font-display:swap}
+@font-face{font-family:Inter;font-weight:400;src:url(/fonts/inter-400.woff2) format('woff2');font-display:swap}
+@font-face{font-family:Inter;font-weight:600;src:url(/fonts/inter-600.woff2) format('woff2');font-display:swap}
+@font-face{font-family:Inter;font-weight:700;src:url(/fonts/inter-700.woff2) format('woff2');font-display:swap}
+@font-face{font-family:Inter;font-weight:800 900;src:url(/fonts/inter-900.woff2) format('woff2');font-display:swap}
+:root{--bg:#0B0F14;--lime:#C8FF3E;--text:#F2F5F7;--muted:#9AA6B2;--card:rgba(21,27,35,.78);--line:rgba(255,255,255,.08)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{overflow-x:hidden}body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:20;background:rgba(11,15,20,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Anton,sans-serif;font-size:26px;letter-spacing:2px}
+.brand img{width:34px;height:34px}
+nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px;margin-left:18px}
+nav a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:54px;padding:0 26px;border-radius:16px;background:var(--lime);color:#0B0F14;font:800 16px Inter,sans-serif;text-decoration:none;border:0;cursor:pointer;box-shadow:0 10px 40px rgba(200,255,62,.25);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:rgba(255,255,255,.06);color:var(--text);box-shadow:none;border:1px solid rgba(255,255,255,.14)}
+.hero{position:relative;padding:0;min-height:min(94vh,900px);display:flex;align-items:flex-start;overflow:hidden}
+.hero picture,.hero>img{position:absolute;inset:0}
+.hero img.bg{width:100%;height:100%;object-fit:cover;object-position:50% 80%}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,15,20,.85) 0%,rgba(11,15,20,.35) 40%,rgba(11,15,20,0) 60%,var(--bg) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-top:clamp(40px,8vh,90px);width:100%}
+.kicker{display:inline-flex;align-items:center;gap:10px;color:var(--lime);font:900 12px Inter;letter-spacing:3px;text-transform:uppercase}
+.kicker:before,.kicker:after{content:"";width:34px;height:2px;background:var(--lime)}
+h1{font-family:Anton,sans-serif;font-weight:400;font-size:clamp(46px,8vw,96px);line-height:.98;letter-spacing:1px;margin:14px 0 16px;text-transform:uppercase}
+h1 em{font-style:normal;color:var(--lime)}
+.lead{color:#C9D2DB;font-size:clamp(16px,2vw,20px);line-height:1.5;max-width:560px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+section{padding:84px 0}
+h2{font-family:Anton,sans-serif;font-weight:400;font-size:clamp(34px,5vw,56px);text-transform:uppercase;letter-spacing:1px;line-height:1.02}
+h2 em{font-style:normal;color:var(--lime)}
+.sub{color:var(--muted);font-size:17px;line-height:1.55;max-width:620px;margin-top:12px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:34px}
+.f{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px}
+.f .n{font-family:Anton,sans-serif;color:var(--lime);font-size:42px;line-height:1}
+.f h3{font-size:19px;margin:12px 0 6px}
+.f p{color:var(--muted);line-height:1.5;font-size:15px}
+.pjs{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:30px 22px 10px;margin:0 -22px}
+.pj{flex:0 0 200px;scroll-snap-align:start;border-radius:24px;padding:14px;border:1px solid var(--line);position:relative;overflow:hidden}
+.pj img{width:100%;height:220px;object-fit:contain;display:block}
+.pj b{display:block;font-family:Anton,sans-serif;font-weight:400;font-size:20px;letter-spacing:.5px;margin-top:6px}
+.pj span{font:900 10px Inter;letter-spacing:2px}
+.m{background:linear-gradient(180deg,#5B12B8,#140724)}.m span{color:#FFB8F7}
+.l{background:linear-gradient(180deg,#8A5A12,#1A1206)}.l span{color:#FFE7A6}
+.cardsec{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.cardsec img{width:100%;max-width:420px;display:block;margin:0 auto;filter:drop-shadow(0 30px 60px rgba(246,195,67,.25))}
+@media(max-width:760px){.cardsec{grid-template-columns:1fr}.cardsec img{max-width:290px}nav a.hide{display:none}
+.hero{flex-direction:column;min-height:0}.hero img.bg{position:relative;order:2;height:auto;aspect-ratio:1/1;object-position:50% 68%;margin-top:-40px;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 80%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 18%,#000 80%,transparent 100%)}.hero:after{display:none}.hero .wrap{order:1;padding-top:34px}}
+.honest{background:linear-gradient(135deg,rgba(200,255,62,.08),rgba(200,255,62,0));border:1px solid rgba(200,255,62,.25);border-radius:28px;padding:30px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px;margin-top:10px}
+.faq summary{cursor:pointer;font-weight:700;font-size:16px;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";float:right;color:var(--lime);font-weight:900}
+.faq details[open] summary:after{content:"–"}
+.faq p{color:var(--muted);line-height:1.55;margin-top:10px}
+.code{display:flex;gap:8px;max-width:420px;margin-top:16px}
+.code input{flex:1;min-width:0;height:54px;border-radius:16px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);color:#fff;font:700 18px Inter;padding:0 16px;text-transform:uppercase;letter-spacing:2px}
+footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+footer a{color:var(--muted);text-decoration:none;margin-right:16px}
+.rev{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rev.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="/"><img src="/logo.png" alt="" width="34" height="34">CRACKZ</a>
+  <nav><a class="hide" href="#como">Cómo funciona</a><a class="hide" href="#personajes">Personajes</a><a href="/novedades">Novedades</a></nav>
+</div></header>
+
+<main>
+<section class="hero" aria-label="Portada">
+  <img class="bg" src="/img/hero.webp" alt="Personajes 3D de Crackz en un estadio de noche" width="1600" height="1000" fetchpriority="high">
+  <div class="wrap">
+    <span class="kicker">Fútbol entre amigos</span>
+    <h1>Tu pachanga,<br><em>como en el FIFA</em></h1>
+    <p class="lead">Convoca por WhatsApp en 10 segundos, vota a tus compis después de cada partido y sube tu media. Cartas, temporadas, trofeos y personajes 3D para el fútbol de los amigos.</p>
+    <div class="ctas">
+      <a class="btn" href="#beta">Entrar en la beta gratis</a>
+      <a class="btn ghost" href="#como">Cómo funciona</a>
+    </div>
+  </div>
+</section>
+
+<section id="como"><div class="wrap">
+  <span class="kicker">Cómo funciona</span>
+  <h2 class="rev">De WhatsApp<br>a <em>leyenda</em></h2>
+  <p class="sub rev">Sin hojas de Excel ni grupos llenos de “¿quién viene?”. Crackz lo hace por ti.</p>
+  <div class="grid3">
+    <div class="f rev"><div class="n">01</div><h3>Convoca en 10 segundos</h3><p>Creas el partido y pasas el enlace. Tus amigos se apuntan desde el navegador, sin descargar nada. Con dirección del campo en Maps.</p></div>
+    <div class="f rev"><div class="n">02</div><h3>Vota y sube tu media</h3><p>Al acabar, cada uno vota a los demás. Goles, asistencias y MVP. Tu media sube o baja poco a poco: justa y sin humillar a nadie.</p></div>
+    <div class="f rev"><div class="n">03</div><h3>Temporadas y palmarés</h3><p>MVP de temporada, pichichi, rachas y trofeos. Un historial de tu fútbol con los colegas que te acompaña durante años.</p></div>
+  </div>
+</div></section>
+
+<section id="carta" style="padding-top:20px"><div class="wrap cardsec">
+  <div>
+    <span class="kicker">Tu carta</span>
+    <h2 class="rev">Tu media,<br><em>votada por los tuyos</em></h2>
+    <p class="sub rev">Cada partido cuenta. Tu carta cambia con tu rendimiento real y la puedes personalizar con marcos, letras y un jugador 3D a tu imagen.</p>
+  </div>
+  <img class="rev" src="/img/carta.webp" alt="Carta de jugador de Crackz con media 82" width="520" height="740" loading="lazy">
+</div></section>
+
+<section id="personajes"><div class="wrap">
+  <span class="kicker">Personajes 3D</span>
+  <h2 class="rev">Míticos.<br><em>Legendarios.</em> Tuyos.</h2>
+  <p class="sub rev">Crea tu jugador o juega con personajes que bailan, celebran y salen en tu carta.</p>
+  <div class="pjs">
+    <div class="pj m"><span>✦ MÍTICO</span><img src="/img/pj-esqueleto.webp" alt="Rey Esqueleto" loading="lazy"><b>REY ESQUELETO</b></div>
+    <div class="pj m"><span>✦ MÍTICO</span><img src="/img/pj-caballero.webp" alt="Caballero Dorado" loading="lazy"><b>CABALLERO DORADO</b></div>
+    <div class="pj m"><span>✦ MÍTICO</span><img src="/img/pj-zorro.webp" alt="Zorro Sombra" loading="lazy"><b>ZORRO SOMBRA</b></div>
+    <div class="pj l"><span>★ LEGENDARIO</span><img src="/img/pj-striker.webp" alt="Striker Azul" loading="lazy"><b>STRIKER AZUL</b></div>
+    <div class="pj l"><span>★ LEGENDARIO</span><img src="/img/pj-morado.webp" alt="Morado Pro" loading="lazy"><b>MORADO PRO</b></div>
+    <div class="pj l"><span>★ LEGENDARIO</span><img src="/img/pj-gamer.webp" alt="Gamer Neón" loading="lazy"><b>GAMER NEÓN</b></div>
+    <div class="pj l"><span>★ LEGENDARIO</span><img src="/img/pj-capucha.webp" alt="Encapuchado X" loading="lazy"><b>ENCAPUCHADO X</b></div>
+  </div>
+</div></section>
+
+<section style="padding-top:20px"><div class="wrap">
+  <div class="honest rev">
+    <span class="kicker">Sin trampas</span>
+    <h2 style="font-size:clamp(28px,4vw,40px);margin-top:10px">Gratis de verdad</h2>
+    <p class="sub">Todo lo importante es gratis. La tienda solo tiene objetos estéticos: nunca te hace mejor jugador ni cambia tu media. Sin anuncios metidos a la fuerza entre partido y partido. Lo que se recauda mantiene el proyecto y servirá para organizar torneos con premios.</p>
+  </div>
+</div></section>
+
+<section id="beta"><div class="wrap">
+  <span class="kicker">Beta abierta</span>
+  <h2 class="rev">¿Te han<br><em>invitado?</em></h2>
+  <p class="sub rev">Si tienes un código de partido, mételo aquí. Si te han pasado el enlace de un grupo, ábrelo y entrarás directo. Crackz llegará pronto a Google Play; mientras, la beta está abierta para grupos de amigos.</p>
+  <form class="code" onsubmit="event.preventDefault();var c=document.getElementById('c').value.trim().toUpperCase();if(c)location.href='/jugar/'+encodeURIComponent(c)">
+    <label for="c" style="position:absolute;left:-9999px">Código</label>
+    <input id="c" maxlength="8" placeholder="ABC123" autocomplete="off">
+    <button class="btn" style="height:54px">Entrar</button>
+  </form>
+  <p class="sub" style="font-size:14px">¿Sin código? Escríbenos a <a href="mailto:hola@crackz.es" style="color:var(--lime)">hola@crackz.es</a> y te damos acceso.</p>
+</div></section>
+
+<section class="faq" style="padding-top:20px"><div class="wrap">
+  <span class="kicker">Preguntas</span>
+  <h2>Lo que nos preguntan</h2>
+  <details><summary>¿Crackz es gratis?</summary><p>Sí. Organizar partidos, votar, tu carta, la media y las temporadas son gratis. La tienda solo tiene objetos estéticos y nunca cambia tu media.</p></details>
+  <details><summary>¿Mis amigos tienen que descargar la app para apuntarse?</summary><p>No. Pasas el enlace del partido por WhatsApp y se apuntan desde el navegador. Para votar y tener su carta sí necesitan la app.</p></details>
+  <details><summary>¿Cómo se calcula la media?</summary><p>Después de cada partido tus compañeros votan tu actuación. Se suman goles, asistencias y el MVP. La media sube o baja poco a poco para que sea justa.</p></details>
+  <details><summary>¿Sirve para fútbol 7, fútbol sala y fútbol 11?</summary><p>Sí. Crackz sirve para cualquier pachanga: fútbol sala, fútbol 7, fútbol 11 y también pádel o básquet con amigos.</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div><a class="brand" href="/" style="font-size:20px"><img src="/logo.png" alt="" width="26" height="26">CRACKZ</a></div>
+  <div><a href="/novedades">Novedades</a><a href="/privacidad">Privacidad</a><a href="mailto:hola@crackz.es">Contacto</a></div>
+  <div>© 2026 Crackz</div>
+</div></footer>
+<script>
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.rev').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
