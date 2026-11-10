@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Únete a mi grupo · Crackz</title>
+<meta property="og:title" content="⚽ Te invitan a un grupo de Crackz">
+<meta property="og:description" content="Pachangas con cartas tipo FIFA, votos y ranking. Toca para unirte.">
+<meta property="og:image" content="https://crackz.es/logo.png">
+<meta name="theme-color" content="#0B0F14">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;background:radial-gradient(120% 60% at 50% 0%,rgba(200,255,62,.18),#0B0F14 62%);background-color:#0B0F14;color:#F2F5F7;font-family:Inter,system-ui,sans-serif;display:flex;align-items:center;justify-content:center;padding:24px}
+.c{width:100%;max-width:420px;text-align:center}
+img{width:84px;height:84px}
+h1{font-family:Anton,sans-serif;font-size:40px;letter-spacing:1px;margin:12px 0 6px;line-height:1.05}
+p{color:#9AA6B2;font-size:15px;line-height:1.5}
+.code{margin:22px auto 8px;display:inline-flex;gap:6px}
+.code span{width:46px;height:58px;border-radius:14px;background:#151B23;border:1px solid rgba(200,255,62,.35);display:flex;align-items:center;justify-content:center;font-family:Anton,sans-serif;font-size:32px;color:#C8FF3E}
+.btn{display:block;width:100%;margin-top:14px;padding:17px;border-radius:18px;font-weight:800;font-size:17px;text-decoration:none;border:0;cursor:pointer}
+.p{background:linear-gradient(#E4FF8A,#C8FF3E 45%,#8CC21B);color:#0B1405;box-shadow:0 8px 28px rgba(200,255,62,.35)}
+.s{background:#151B23;color:#F2F5F7;border:1px solid rgba(255,255,255,.12)}
+.ok{color:#C8FF3E;font-size:13px;height:18px;margin-top:8px}
+.paso{text-align:left;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:14px 16px;margin-top:20px;color:#9AA6B2;font-size:13.5px;line-height:1.6}
+.paso b{color:#F2F5F7}
+</style></head><body><div class="c">
+<img src="/logo.png" alt="Crackz" onerror="this.style.display='none'">
+<h1>TE INVITAN A<br>SU GRUPO</h1>
+<p>Partidos, equipos equilibrados, votos y tu carta tipo FIFA.</p>
+<div class="code" id="code"></div>
+<a class="btn p" id="abrir" href="#">⚽ Unirme en la app</a>
+<button class="btn s" id="copiar">Copiar código</button>
+<div class="ok" id="ok"></div>
+<div class="paso">¿No se abre la app? Abre <b>Crackz</b> → <b>Grupos</b> → <b>Tengo código</b>. Si copias el código antes, ya lo tendrás a mano.</div>
+</div>
+<script>
+const q=new URLSearchParams(location.search);
+const code=((q.get('c')||q.get('codigo')||location.hash.slice(1)||'').toUpperCase().replace(/[^A-Z0-9]/g,'')).slice(0,10);
+document.getElementById('code').innerHTML=code?[...code].map(x=>'<span>'+x+'</span>').join(''):'<p>Falta el código en el enlace</p>';
+// la beta y la app normal tienen esquemas distintos: se prueba primero la beta
+const deep='crackz-beta://grupos?codigo='+code, deep2='crackz://grupos?codigo='+code;
+const abrir=()=>{ location.href=deep; setTimeout(()=>{ if(!document.hidden) location.href=deep2; },900); };
+document.getElementById('abrir').onclick=e=>{e.preventDefault(); abrir();};
+document.getElementById('copiar').onclick=async()=>{ try{ await navigator.clipboard.writeText(code); document.getElementById('ok').textContent='✓ Código copiado'; }catch(e){ document.getElementById('ok').textContent='Código: '+code; } };
+if(code && /Android|iPhone/i.test(navigator.userAgent)) setTimeout(abrir,400);
+</script></body></html>
