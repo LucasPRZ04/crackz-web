@@ -174,7 +174,7 @@ footer a{color:var(--muted);text-decoration:none;margin-right:16px}
   <span class="kicker">Beta abierta</span>
   <h2 class="rev">¿Te han<br><em>invitado?</em></h2>
   <p class="sub rev">Si tienes un código de partido, mételo aquí. Si te han pasado el enlace de un grupo, ábrelo y entrarás directo. Crackz llegará pronto a Google Play; mientras, la beta está abierta para grupos de amigos.</p>
-  <form class="code" onsubmit="event.preventDefault();var c=document.getElementById('c').value.trim().toUpperCase();if(c)location.href='/jugar/'+encodeURIComponent(c)">
+  <form class="code" onsubmit="event.preventDefault();var c=document.getElementById('c').value.trim().toUpperCase();if(c)location.href='/jugar?c='+encodeURIComponent(c)">
     <label for="c" style="position:absolute;left:-9999px">Código</label>
     <input id="c" maxlength="8" placeholder="ABC123" autocomplete="off">
     <button class="btn" style="height:54px">Entrar</button>

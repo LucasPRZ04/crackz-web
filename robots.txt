@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /jugar/
+Disallow: /jugar
 Sitemap: https://crackz.es/sitemap.xml
